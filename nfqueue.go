@@ -359,7 +359,7 @@ func (nfqueue *Nfqueue) setVerdict(id uint32, verdict int, batch bool, attribute
 	data = append(data, attributes...)
 	req := netlink.Message{
 		Header: netlink.Header{
-			Flags:    netlink.Request,
+			Flags:    netlink.HeaderFlagsRequest,
 			Sequence: 0,
 		},
 		Data: data,
